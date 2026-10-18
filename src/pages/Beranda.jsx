@@ -1,65 +1,129 @@
-// src/pages/Beranda.jsx
-// HALAMAN 1: BERANDA (rute "/").
-// "Halaman" (page) pada dasarnya juga komponen React; bedanya ia mewakili
-// satu URL penuh dan tersusun dari komponen-komponen yang lebih kecil.
 
 import { Link } from "react-router-dom";
 import CourseCard from "../components/CourseCard";
 import { courses } from "../data/courses";
 
-// Props diterima dari App.jsx (induk). Beranda tidak menyimpan state favorit
-// sendiri, melainkan memakai milik App agar konsisten di semua halaman.
 function Beranda({ favorit, onToggleFavorite }) {
-  // slice(0, 3) = ambil 3 mata kuliah pertama untuk ditampilkan di beranda
-  const unggulan = courses.slice(0, 3);
+  const unggulan = courses.slice(0, 4);
 
   return (
     <>
-      {/* ===== HERO: bagian pembuka halaman ===== */}
-      <section className="hero">
-        <div className="container">
-          <h1>Selamat Datang di Program Studi Informatika</h1>
-          <p>
-            Belajar membangun perangkat lunak, jaringan, dan kecerdasan buatan
-            bersama dosen berpengalaman.
-          </p>
-          <Link to="/mata-kuliah" className="btn btn-accent">
-            Lihat Mata Kuliah
+      {/* Hero */}
+      <section className="beranda-hero">
+        <div className="beranda-hero-overlay">
+          <div className="container beranda-hero-content">
+            <span className="beranda-label">
+              FAKULTAS SAINS DAN TEKNOLOGI
+            </span>
+
+            <h1>
+              Program Studi
+              <br />
+              <span>Informatika</span>
+            </h1>
+
+            <p>
+              Universitas Sanata Dharma
+            </p>
+
+            <p className="hero-description">
+              Mengembangkan ilmu teknologi informasi dengan
+              keunggulan akademik dan nilai-nilai kemanusiaan
+              untuk menciptakan masa depan yang lebih baik.
+            </p>
+
+            <div className="beranda-actions">
+              <Link to="/profil" className="btn btn-accent">
+                Kenali Program Studi
+              </Link>
+
+              <Link to="/mata-kuliah" className="btn btn-outline-light">
+                Jelajahi Mata Kuliah
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pengenalan */}
+      <section className="container section">
+        <div className="beranda-intro">
+          <div>
+            <span className="section-label">
+              TENTANG INFORMATIKA USD
+            </span>
+
+            <h2>
+              Belajar Teknologi, Mengembangkan Kemanusiaan
+            </h2>
+          </div>
+
+          <div>
+            <p>
+              Program Studi Informatika Universitas Sanata Dharma
+              berada di bawah Fakultas Sains dan Teknologi.
+              Program studi ini mengembangkan pendidikan di bidang
+              informatika dengan memadukan kemampuan akademik,
+              inovasi teknologi, dan nilai-nilai kemanusiaan.
+            </p>
+
+            <Link to="#profil-prodi" className="text-link">
+              Pelajari profil program studi →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Mata kuliah unggulan */}
+      <section className="beranda-courses">
+        <div className="container section">
+          <div className="courses-heading">
+            <div>
+              <span className="section-label">
+                KEGIATAN AKADEMIK
+              </span>
+              <h2>Jelajahi Mata Kuliah</h2>
+              <p>
+                Lihat beberapa mata kuliah yang tersedia
+                dalam katalog pembelajaran.
+              </p>
+            </div>
+
+            <Link to="/mata-kuliah" className="text-link">
+              Lihat Semua Mata Kuliah →
+            </Link>
+          </div>
+
+          <div className="grid grid-3">
+            {unggulan.map((course) => (
+              <CourseCard
+                key={course.kode}
+                course={course}
+                isFavorite={favorit.includes(course.kode)}
+                onToggleFavorite={onToggleFavorite}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Informasi kampus */}
+      <section className="container section">
+        <div className="beranda-contact">
+          <div>
+            <span className="section-label">
+              UNIVERSITAS SANATA DHARMA
+            </span>
+            <h2>Kenali lebih dekat Informatika USD</h2>
+            <p>
+              Kunjungi halaman profil untuk mengetahui informasi
+              program studi, kurikulum, dan kontak.
+            </p>
+          </div>
+
+          <Link to="/kontak" className="btn btn-accent">
+            Informasi Kontak
           </Link>
-        </div>
-      </section>
-
-      {/* ===== KARTU VISI, MISI, PROSPEK KARIER ===== */}
-      <section className="container section">
-        <div className="grid grid-3">
-          <div className="card">
-            <h3>Visi</h3>
-            <p>Menjadi program studi unggul dalam pendidikan dan inovasi teknologi informasi.</p>
-          </div>
-          <div className="card">
-            <h3>Misi</h3>
-            <p>Menyelenggarakan pembelajaran berkualitas, riset terapan, dan pengabdian kepada masyarakat.</p>
-          </div>
-          <div className="card">
-            <h3>Prospek Karier</h3>
-            <p>Pengembang web, analis sistem, administrator jaringan, dan peneliti data.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== CONTOH MATA KULIAH: memakai ulang komponen CourseCard ===== */}
-      <section className="container section">
-        <h2>Mata Kuliah Pilihan</h2>
-        <div className="grid grid-3">
-          {/* .map() mengubah array data menjadi array elemen JSX */}
-          {unggulan.map((course) => (
-            <CourseCard
-              key={course.kode}
-              course={course}
-              isFavorite={favorit.includes(course.kode)}
-              onToggleFavorite={onToggleFavorite}
-            />
-          ))}
         </div>
       </section>
     </>
