@@ -1,0 +1,158 @@
+/* src/index.css
+   CSS GLOBAL buatan sendiri. Dibagi menjadi bagian-bagian bernomor agar mudah dicari.
+   Urutan: 1.Variabel -> 2.Reset -> 3.Layout -> 4.Komponen -> 5.Responsif */
+
+/* ========== 1. VARIABEL WARNA & UKURAN ==========
+   CSS variable (--nama) ditulis sekali di :root lalu dipakai di mana saja
+   dengan var(--nama). Mau ganti tema? Cukup ubah di sini. */
+:root {
+  --biru-tua: #12305b;
+  --biru: #1f4f9a;
+  --kuning: #f5b301;
+  --latar: #f4f7fb;
+  --putih: #ffffff;
+  --teks: #1d2433;
+  --abu: #5c667a;
+  --garis: #d9e0ec;
+  --merah: #c62828;
+  --hijau: #1b7a3d;
+  --radius: 10px;
+}
+
+/* ========== 2. RESET DASAR ========== */
+* {
+  box-sizing: border-box; /* padding & border dihitung ke dalam lebar elemen */
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--latar);
+  color: var(--teks);
+  line-height: 1.6;
+}
+
+h1, h2, h3 { color: var(--biru-tua); line-height: 1.25; margin: 0 0 0.6rem; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; margin-top: 1.2rem; }
+h3 { font-size: 1.15rem; }
+p { margin: 0 0 0.8rem; }
+a { color: var(--biru); }
+
+/* Garis fokus terlihat jelas untuk pengguna keyboard (aksesibilitas) */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--kuning);
+  outline-offset: 2px;
+}
+
+/* ========== 3. LAYOUT ========== */
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; } /* isi halaman mengisi ruang sehingga footer selalu di bawah */
+
+.container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 1rem; }
+.section { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* GRID: kolom otomatis. minmax(240px, 1fr) = tiap kolom minimal 240px;
+   jika layar sempit, kolom otomatis turun ke baris berikutnya (responsif). */
+.grid { display: grid; gap: 1rem; margin-bottom: 1rem; }
+.grid-3 { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
+
+/* ========== 4. KOMPONEN ========== */
+
+/* --- Navbar --- */
+.navbar { background: var(--biru-tua); position: sticky; top: 0; z-index: 10; }
+.navbar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 60px; }
+.logo { color: var(--putih); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+.nav-links { display: flex; gap: 0.25rem; }
+.nav-link { color: #dbe5f5; text-decoration: none; padding: 0.5rem 0.9rem; border-radius: 6px; }
+.nav-link:hover { background: rgba(255, 255, 255, 0.12); }
+.nav-link.active { background: var(--kuning); color: var(--biru-tua); font-weight: 600; }
+.hamburger { display: none; background: none; border: 0; color: var(--putih); font-size: 1.6rem; cursor: pointer; }
+
+/* --- Hero --- */
+.hero { background: var(--biru); color: var(--putih); padding: 3.5rem 0; }
+.hero h1 { color: var(--putih); font-size: 2.4rem; max-width: 20ch; }
+.hero p { max-width: 55ch; font-size: 1.1rem; }
+
+/* --- Tombol --- */
+.btn {
+  display: inline-block; background: var(--biru-tua); color: var(--putih);
+  border: 2px solid var(--biru-tua); padding: 0.6rem 1.2rem; border-radius: 8px;
+  font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
+}
+.btn:hover { background: var(--biru); border-color: var(--biru); }
+.btn-accent { background: var(--kuning); border-color: var(--kuning); color: var(--biru-tua); }
+.btn-accent:hover { background: #ffc933; border-color: #ffc933; }
+.btn-outline { background: transparent; color: var(--biru-tua); }
+.btn-outline:hover { background: var(--latar); color: var(--biru-tua); }
+
+/* --- Kartu --- */
+.card {
+  background: var(--putih); border: 1px solid var(--garis); border-radius: var(--radius);
+  padding: 1.2rem; margin-bottom: 1rem;
+}
+.grid > .card { margin-bottom: 0; } /* di dalam grid, jarak diatur oleh gap */
+
+.course-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+.course-card h3 a { text-decoration: none; color: var(--biru-tua); }
+.course-card h3 a:hover { text-decoration: underline; }
+.course-meta { color: var(--abu); margin: 0; }
+
+/* --- Badge & tombol favorit --- */
+.badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
+.badge { display: inline-block; background: #e3ecfa; color: var(--biru-tua); padding: 0.15rem 0.7rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
+.badge-accent { background: var(--kuning); }
+.fav-btn { background: none; border: 0; font-size: 1.5rem; line-height: 1; color: var(--abu); cursor: pointer; }
+.fav-btn.active { color: var(--kuning); }
+
+/* --- Toolbar pencarian --- */
+.toolbar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; }
+.toolbar input[type="search"] { flex: 1 1 240px; }
+.checkbox { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+.result-info { color: var(--abu); }
+.empty { background: var(--putih); border: 1px dashed var(--garis); padding: 1.5rem; border-radius: var(--radius); text-align: center; }
+
+/* --- Statistik --- */
+.stat { text-align: center; }
+.stat-number { font-size: 2.2rem; font-weight: 700; color: var(--biru); margin: 0; }
+
+/* --- Breadcrumb & aksi --- */
+.breadcrumb { margin-bottom: 1rem; color: var(--abu); font-size: 0.95rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.2rem; }
+
+/* --- Formulir --- */
+input[type="text"], input[type="email"], input[type="search"], select, textarea {
+  width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--garis);
+  border-radius: 8px; font: inherit; background: var(--putih);
+}
+.toolbar select { width: auto; }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 0.3rem; }
+.input-error { border-color: var(--merah) !important; }
+.error-text { display: block; color: var(--merah); font-size: 0.9rem; margin-top: 0.25rem; }
+.alert-success { background: #e6f4ea; color: var(--hijau); padding: 0.7rem 1rem; border-radius: 8px; }
+.form-note { color: var(--abu); font-size: 0.9rem; margin: 0.8rem 0 0; }
+
+/* --- Footer --- */
+.footer { background: var(--biru-tua); color: #dbe5f5; padding: 1.2rem 0; text-align: center; }
+.footer p { margin: 0; }
+
+/* ========== 5. RESPONSIF ==========
+   @media = aturan yang hanya berlaku pada kondisi tertentu.
+   Di sini: jika lebar layar <= 720px (ponsel), ubah tampilan. */
+@media (max-width: 720px) {
+  h1 { font-size: 1.6rem; }
+  .hero { padding: 2.2rem 0; }
+  .hero h1 { font-size: 1.8rem; }
+
+  .hamburger { display: block; }
+
+  /* Menu disembunyikan, lalu tampil sebagai daftar vertikal saat kelas "open" aktif */
+  .nav-links {
+    display: none; position: absolute; top: 60px; left: 0; right: 0;
+    flex-direction: column; background: var(--biru-tua); padding: 0.5rem 1rem 1rem;
+  }
+  .nav-links.open { display: flex; }
+}
