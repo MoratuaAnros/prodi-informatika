@@ -43,10 +43,10 @@ function App() {
           <Route path="/" element={<Beranda {...favoritProps} />} />
           <Route path="/profil" element={<ProfilProdi />} />
           <Route path="/mata-kuliah" element={<MataKuliah {...favoritProps} />} />
-          {/* ":kode" adalah parameter dinamis, dibaca dengan useParams() */}
+          {}
           <Route path="/mata-kuliah/:kode" element={<DetailMataKuliah {...favoritProps} />} />
           <Route path="/kontak" element={<Kontak />} />
-          {/* "*" = tangkap semua alamat lain -> halaman 404 */}
+          {}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

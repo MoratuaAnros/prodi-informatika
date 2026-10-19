@@ -66,39 +66,6 @@ export const courses = [
   },
 
   // SEMESTER 3
-edit-profile
-  {
-    kode: "IF301",
-    nama: "Struktur Data Non Linear",
-    sks: 3,
-    semester: 3,
-    dosen: "Agnes Permata, S.Kom., M.Kom.",
-    deskripsi:
-      "Mempelajari struktur data nonlinier untuk menyimpan dan mengelola data dengan hubungan yang lebih kompleks, terutama struktur pohon dan graf serta algoritma yang berkaitan dengannya.",
-    capaian: [
-      "Menjelaskan karakteristik struktur data nonlinier",
-      "Merepresentasikan data menggunakan struktur pohon dan graf",
-      "Melakukan operasi dasar pada struktur data pohon",
-      "Memilih struktur data yang sesuai dengan kebutuhan penyelesaian masalah",
-    ],
-  },
-  {
-    kode: "IF302",
-    nama: "Aljabar Linear",
-    sks: 3,
-    semester: 3,
-    dosen: "Michael Hartono, S.Si., M.Sc.",
-    deskripsi:
-      "Mempelajari vektor, matriks, operasi matriks, sistem persamaan linear, determinan, dan konsep ruang vektor yang mendukung pemodelan matematika dalam informatika.",
-    capaian: [
-      "Melakukan operasi dasar pada vektor dan matriks",
-      "Menyelesaikan sistem persamaan linear",
-      "Menghitung determinan dan memahami invers matriks",
-      "Menerapkan konsep aljabar linear pada persoalan komputasi sederhana",
-    ],
-  },
-
- main
   {
     kode: "IF303",
     nama: "Sistem Cerdas",
@@ -132,54 +99,6 @@ edit-profile
   },
 
   // SEMESTER 4
-edit-profile
-  {
-    kode: "IF401",
-    nama: "Analisis dan Strategi Algoritma",
-    sks: 3,
-    semester: 4,
-    dosen: "Gabriel Prakoso, S.Kom., M.Cs.",
-    deskripsi:
-      "Mempelajari cara menganalisis efisiensi algoritma dan berbagai strategi perancangan algoritma, termasuk pencarian, pengurutan, divide and conquer, greedy, dan pemrograman dinamis.",
-    capaian: [
-      "Menganalisis kompleksitas waktu dan ruang algoritma",
-      "Membandingkan efisiensi beberapa algoritma untuk masalah yang sama",
-      "Menerapkan strategi perancangan algoritma yang sesuai",
-      "Menentukan pendekatan algoritmik berdasarkan karakteristik masalah",
-    ],
-  },
-  {
-    kode: "IF402",
-    nama: "Rekayasa Perangkat Lunak",
-    sks: 3,
-    semester: 4,
-    dosen: "Elisa Handayani, S.T., M.T.",
-    deskripsi:
-      "Mempelajari prinsip dan proses pengembangan perangkat lunak secara sistematis, mulai dari analisis kebutuhan, perancangan, implementasi, pengujian, hingga pemeliharaan.",
-    capaian: [
-      "Menjelaskan tahapan siklus hidup pengembangan perangkat lunak",
-      "Mengidentifikasi dan mendokumentasikan kebutuhan perangkat lunak",
-      "Membuat rancangan perangkat lunak berdasarkan kebutuhan pengguna",
-      "Menjelaskan pentingnya pengujian dan pemeliharaan perangkat lunak",
-    ],
-  },
-  {
-    kode: "IF403",
-    nama: "Interaksi Manusia dan Komputer",
-    sks: 2,
-    semester: 4,
-    dosen: "Fransiskus Nugraha, S.Kom., M.Kom.",
-    deskripsi:
-      "Mempelajari prinsip interaksi antara manusia dan komputer, termasuk kebutuhan pengguna, desain antarmuka, kegunaan, aksesibilitas, serta evaluasi pengalaman pengguna.",
-    capaian: [
-      "Mengidentifikasi kebutuhan dan karakteristik pengguna",
-      "Menerapkan prinsip desain antarmuka yang mudah dipahami",
-      "Membuat prototipe antarmuka untuk aplikasi sederhana",
-      "Mengevaluasi kegunaan antarmuka berdasarkan kriteria yang relevan",
-    ],
-  },
-
-    main
   {
     kode: "IF404",
     nama: "Pemrograman Berbasis Web",
@@ -199,7 +118,7 @@ edit-profile
   {
     kode: "IF405",
     nama: "Machine Learning",
-    sks: 3,
+    sks: 4,
     semester: 4,
     dosen: "Dr. Sri Hartati Wijono",
     deskripsi:

@@ -8,7 +8,7 @@ function Beranda({ favorit, onToggleFavorite }) {
 
   return (
     <>
-      {/* Hero */}
+      {}
       <section className="beranda-hero">
         <div className="beranda-hero-overlay">
           <div className="container beranda-hero-content">
@@ -32,15 +32,6 @@ function Beranda({ favorit, onToggleFavorite }) {
               untuk menciptakan masa depan yang lebih baik.
             </p>
 
-            <div className="beranda-actions">
-              <Link to="/profil" className="btn btn-accent">
-                Kenali Program Studi
-              </Link>
-
-              <Link to="/mata-kuliah" className="btn btn-outline-light">
-                Jelajahi Mata Kuliah
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -67,14 +58,14 @@ function Beranda({ favorit, onToggleFavorite }) {
               inovasi teknologi, dan nilai-nilai kemanusiaan.
             </p>
 
-            <Link to="#profil-prodi" className="text-link">
+            <Link to="/profil" className="text-link">
               Pelajari profil program studi →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Mata kuliah unggulan */}
+      {}
       <section className="beranda-courses">
         <div className="container section">
           <div className="courses-heading">
@@ -107,7 +98,7 @@ function Beranda({ favorit, onToggleFavorite }) {
         </div>
       </section>
 
-      {/* Informasi kampus */}
+      {}
       <section className="container section">
         <div className="beranda-contact">
           <div>

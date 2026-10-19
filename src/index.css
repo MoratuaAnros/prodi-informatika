@@ -12,7 +12,7 @@
   --radius: 10px;
 }
 
-/* ========== 2. RESET DASAR ========== */
+/* 2. RESET DASAR */
 * {
   box-sizing: border-box; /* padding & border dihitung ke dalam lebar elemen */
 }
@@ -39,7 +39,7 @@ select:focus-visible, textarea:focus-visible {
   outline-offset: 2px;
 }
 
-/* ========== 3. LAYOUT ========== */
+/* 3. LAYOUT */
 .app { min-height: 100vh; display: flex; flex-direction: column; }
 main { flex: 1; } /* isi halaman mengisi ruang sehingga footer selalu di bawah */
 
@@ -50,9 +50,9 @@ main { flex: 1; } /* isi halaman mengisi ruang sehingga footer selalu di bawah *
 .grid-3 { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
 
-/* ========== 4. KOMPONEN ========== */
+/* 4. KOMPONEN */
 
-/* --- Navbar --- */
+/* Navbar */
 .navbar { background: var(--biru-tua); position: sticky; top: 0; z-index: 10; }
 .navbar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 60px; }
 .logo { color: var(--putih); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
@@ -62,12 +62,12 @@ main { flex: 1; } /* isi halaman mengisi ruang sehingga footer selalu di bawah *
 .nav-link.active { background: var(--kuning); color: var(--biru-tua); font-weight: 600; }
 .hamburger { display: none; background: none; border: 0; color: var(--putih); font-size: 1.6rem; cursor: pointer; }
 
-/* --- Hero --- */
+/* Hero */
 .hero { background: var(--biru); color: var(--putih); padding: 3.5rem 0; }
 .hero h1 { color: var(--putih); font-size: 2.4rem; max-width: 20ch; }
 .hero p { max-width: 55ch; font-size: 1.1rem; }
 
-/* --- Tombol --- */
+/* Tombol */
 .btn {
   display: inline-block; background: var(--biru-tua); color: var(--putih);
   border: 2px solid var(--biru-tua); padding: 0.6rem 1.2rem; border-radius: 8px;
@@ -79,7 +79,7 @@ main { flex: 1; } /* isi halaman mengisi ruang sehingga footer selalu di bawah *
 .btn-outline { background: transparent; color: var(--biru-tua); }
 .btn-outline:hover { background: var(--latar); color: var(--biru-tua); }
 
-/* --- Kartu --- */
+/* Kartu */
 .card {
   background: var(--putih); border: 1px solid var(--garis); border-radius: var(--radius);
   padding: 1.2rem; margin-bottom: 1rem;
@@ -91,29 +91,29 @@ main { flex: 1; } /* isi halaman mengisi ruang sehingga footer selalu di bawah *
 .course-card h3 a:hover { text-decoration: underline; }
 .course-meta { color: var(--abu); margin: 0; }
 
-/* --- Badge & tombol favorit --- */
+/* Badge & tombol favorit */
 .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
 .badge { display: inline-block; background: #e3ecfa; color: var(--biru-tua); padding: 0.15rem 0.7rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
 .badge-accent { background: var(--kuning); }
 .fav-btn { background: none; border: 0; font-size: 1.5rem; line-height: 1; color: var(--abu); cursor: pointer; }
 .fav-btn.active { color: var(--kuning); }
 
-/* --- Toolbar pencarian --- */
+/* Toolbar pencarian */
 .toolbar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; }
 .toolbar input[type="search"] { flex: 1 1 240px; }
 .checkbox { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
 .result-info { color: var(--abu); }
 .empty { background: var(--putih); border: 1px dashed var(--garis); padding: 1.5rem; border-radius: var(--radius); text-align: center; }
 
-/* --- Statistik --- */
+/* Statistik */
 .stat { text-align: center; }
 .stat-number { font-size: 2.2rem; font-weight: 700; color: var(--biru); margin: 0; }
 
-/* --- Breadcrumb & aksi --- */
+/* Breadcrumb & aksi */
 .breadcrumb { margin-bottom: 1rem; color: var(--abu); font-size: 0.95rem; }
 .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.2rem; }
 
-/* --- Formulir --- */
+/* Formulir */
 input[type="text"], input[type="email"], input[type="search"], select, textarea {
   width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--garis);
   border-radius: 8px; font: inherit; background: var(--putih);
@@ -126,11 +126,11 @@ input[type="text"], input[type="email"], input[type="search"], select, textarea 
 .alert-success { background: #e6f4ea; color: var(--hijau); padding: 0.7rem 1rem; border-radius: 8px; }
 .form-note { color: var(--abu); font-size: 0.9rem; margin: 0.8rem 0 0; }
 
-/* --- Footer --- */
+/* Footer */
 .footer { background: var(--biru-tua); color: #dbe5f5; padding: 1.2rem 0; text-align: center; }
 .footer p { margin: 0; }
 
-/* ========== 5. RESPONSIF ==========
+/* 5. RESPONSIF
    @media = aturan yang hanya berlaku pada kondisi tertentu.
    Di sini: jika lebar layar <= 720px (ponsel), ubah tampilan. */
 @media (max-width: 720px) {
@@ -149,7 +149,7 @@ input[type="text"], input[type="email"], input[type="search"], select, textarea 
 }
 
 
-/* ===== BERANDA ===== */
+/* BERANDA */
 
 .beranda-hero {
   min-height: 490px;
