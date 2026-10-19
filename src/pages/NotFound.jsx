@@ -1,7 +1,3 @@
-// src/pages/NotFound.jsx
-// HALAMAN 404: tampil jika pengguna membuka alamat yang tidak ada,
-// misalnya /#/halaman-ngawur. Dipasang pada rute path="*" (cocok dengan apa saja).
-
 import { Link } from "react-router-dom";
 
 function NotFound() {
