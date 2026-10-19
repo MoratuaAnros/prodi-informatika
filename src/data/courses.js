@@ -5,7 +5,7 @@ export const courses = [
     nama: "Algoritma dan Pemrograman",
     sks: 3,
     semester: 1,
-    dosen: "Andreas Pratama, S.Kom., M.Cs.",
+    dosen: "Drs. Johanes Eka Priyatma, M.Sc., Ph.D.",
     deskripsi:
       "Mempelajari dasar algoritma dan pemrograman untuk menyelesaikan masalah secara logis dan sistematis, mulai dari variabel, tipe data, percabangan, perulangan, hingga fungsi.",
     capaian: [
@@ -15,27 +15,13 @@ export const courses = [
       "Menggunakan percabangan, perulangan, dan fungsi untuk menyelesaikan masalah",
     ],
   },
-  {
-    kode: "IF102",
-    nama: "Logika Matematika",
-    sks: 2,
-    semester: 1,
-    dosen: "Maria Natalia, S.T., M.T.",
-    deskripsi:
-      "Mempelajari dasar penalaran logis dalam matematika dan informatika, termasuk proposisi, operator logika, tabel kebenaran, implikasi, dan penarikan kesimpulan.",
-    capaian: [
-      "Mengidentifikasi proposisi dan operator logika",
-      "Menyusun tabel kebenaran dari pernyataan logika",
-      "Menganalisis ekuivalensi dan implikasi logis",
-      "Menggunakan penalaran logis untuk menyelesaikan masalah informatika",
-    ],
-  },
+
   {
     kode: "IF103",
     nama: "Matematika Diskret",
     sks: 3,
     semester: 1,
-    dosen: "Budi Santoso, S.Kom., M.Kom.",
+    dosen: "Eko Hari Parmadi, S.Si., M.Kom.",
     deskripsi:
       "Mempelajari konsep matematika diskret yang menjadi dasar ilmu komputer, meliputi himpunan, relasi, fungsi, kombinatorika, graf, dan konsep diskret lainnya.",
     capaian: [
@@ -45,36 +31,6 @@ export const courses = [
       "Menggunakan konsep graf untuk memodelkan permasalahan tertentu",
     ],
   },
-  {
-    kode: "IF104",
-    nama: "Informatika dan Dampak Sosialnya",
-    sks: 2,
-    semester: 1,
-    dosen: "Clara Wijaya, S.T., M.Cs.",
-    deskripsi:
-      "Membahas perkembangan informatika serta pengaruh teknologi informasi terhadap individu, masyarakat, lingkungan, dan kehidupan sosial, termasuk tanggung jawab dalam penggunaan teknologi.",
-    capaian: [
-      "Menjelaskan peran informatika dalam kehidupan masyarakat",
-      "Mengidentifikasi dampak positif dan negatif teknologi informasi",
-      "Menganalisis persoalan sosial dan etika yang berkaitan dengan teknologi",
-      "Menunjukkan sikap bertanggung jawab dalam penggunaan teknologi informasi",
-    ],
-  },
-  {
-    kode: "IF105",
-    nama: "Sistem Digital",
-    sks: 2,
-    semester: 1,
-    dosen: "Daniel Saputra, S.Kom., M.T.",
-    deskripsi:
-      "Mempelajari dasar sistem digital, sistem bilangan, representasi data, aljabar Boolean, dan gerbang logika sebagai fondasi untuk memahami perangkat keras komputer.",
-    capaian: [
-      "Mengonversi bilangan antara sistem biner, desimal, dan heksadesimal",
-      "Menjelaskan konsep dasar aljabar Boolean",
-      "Menganalisis fungsi gerbang logika digital",
-      "Menyederhanakan rangkaian logika kombinasi sederhana",
-    ],
-  },
 
   // SEMESTER 2
   {
@@ -82,7 +38,7 @@ export const courses = [
     nama: "Pemrograman Berorientasi Objek",
     sks: 3,
     semester: 2,
-    dosen: "Rina Kartika, M.Cs.",
+    dosen: "Ir. Kartono Pinaryanto, S.T., M.Cs.",
     deskripsi:
       "Mempelajari pendekatan pemrograman berorientasi objek yang mencakup kelas, objek, atribut, metode, enkapsulasi, pewarisan, dan polimorfisme.",
     capaian: [
@@ -92,42 +48,13 @@ export const courses = [
       "Menyusun program sederhana dengan pendekatan berorientasi objek",
     ],
   },
-  {
-    kode: "IF202",
-    nama: "Pemrograman Analisa Data",
-    sks: 2,
-    semester: 2,
-    dosen: "Kevin Aditya, S.Kom., M.Kom.",
-    deskripsi:
-      "Mempelajari penggunaan pemrograman untuk mengolah, memeriksa, dan menganalisis data agar informasi yang diperoleh dapat digunakan untuk memahami suatu permasalahan.",
-    capaian: [
-      "Membaca dan mengolah data menggunakan program",
-      "Melakukan pembersihan data sederhana",
-      "Menggunakan operasi pemrograman untuk menghitung ringkasan data",
-      "Menyajikan hasil analisis data secara terstruktur",
-    ],
-  },
-  {
-    kode: "IF203",
-    nama: "Kalkulus",
-    sks: 3,
-    semester: 2,
-    dosen: "Yohanes Setiawan, S.Si., M.Sc.",
-    deskripsi:
-      "Mempelajari konsep dasar kalkulus, meliputi fungsi, limit, turunan, dan integral, serta penerapannya dalam pemodelan dan penyelesaian masalah kuantitatif.",
-    capaian: [
-      "Menjelaskan konsep fungsi dan limit",
-      "Menghitung turunan fungsi menggunakan aturan diferensiasi",
-      "Menyelesaikan persoalan integral dasar",
-      "Menerapkan konsep kalkulus pada permasalahan matematika sederhana",
-    ],
-  },
+
   {
     kode: "IF204",
-    nama: "Dasar-Dasar Komputer dan Sistem Operasi",
+    nama: "Dasar Komputer dan Sistem Operasi",
     sks: 3,
     semester: 2,
-    dosen: "Diana Maharani, S.Kom., M.T.",
+    dosen: "Puspaningtyas Sanjoyo Adi, S.T., M.T.",
     deskripsi:
       "Mempelajari komponen perangkat keras dan perangkat lunak komputer serta fungsi sistem operasi dalam mengelola proses, memori, berkas, dan sumber daya komputer.",
     capaian: [
@@ -137,23 +64,9 @@ export const courses = [
       "Menjelaskan hubungan antara sistem operasi dan aplikasi",
     ],
   },
-  {
-    kode: "IF205",
-    nama: "Dasar Komunikasi Komputer dan Jaringan",
-    sks: 2,
-    semester: 2,
-    dosen: "Felix Kurniawan, S.T., M.Cs.",
-    deskripsi:
-      "Memperkenalkan prinsip komunikasi data dan jaringan komputer, termasuk media transmisi, perangkat jaringan, topologi, model komunikasi, serta konsep dasar pengalamatan jaringan.",
-    capaian: [
-      "Menjelaskan konsep komunikasi data dan jaringan komputer",
-      "Membedakan media transmisi dan perangkat jaringan",
-      "Mengidentifikasi topologi jaringan beserta karakteristiknya",
-      "Menjelaskan fungsi dasar model OSI dan TCP/IP",
-    ],
-  },
 
   // SEMESTER 3
+edit-profile
   {
     kode: "IF301",
     nama: "Struktur Data Non Linear",
@@ -184,12 +97,14 @@ export const courses = [
       "Menerapkan konsep aljabar linear pada persoalan komputasi sederhana",
     ],
   },
+
+ main
   {
     kode: "IF303",
     nama: "Sistem Cerdas",
     sks: 3,
     semester: 3,
-    dosen: "Stefanus Wijaya, S.Kom., M.Cs.",
+    dosen: "Prof. Dr. Ir. Anastasia Rita Widiarti",
     deskripsi:
       "Memperkenalkan konsep sistem cerdas yang memungkinkan komputer menyelesaikan masalah melalui representasi pengetahuan, penalaran, pencarian solusi, dan metode kecerdasan buatan.",
     capaian: [
@@ -199,12 +114,13 @@ export const courses = [
       "Menganalisis kesesuaian metode sistem cerdas terhadap suatu permasalahan",
     ],
   },
+
   {
     kode: "IF304",
     nama: "Internet dan Aplikasinya",
     sks: 3,
     semester: 3,
-    dosen: "Natalia Puspita, S.T., M.T.",
+    dosen: "Eduardus Hardika Sandy Atmaja, Ph.D.",
     deskripsi:
       "Mempelajari cara kerja internet dan layanan yang menggunakannya, termasuk konsep client-server, protokol web, arsitektur aplikasi internet, serta dasar pengembangan aplikasi berbasis web.",
     capaian: [
@@ -214,23 +130,9 @@ export const courses = [
       "Membuat aplikasi internet sederhana sesuai konsep yang dipelajari",
     ],
   },
-  {
-    kode: "IF305",
-    nama: "Konsep dan Disain Basis Data",
-    sks: 3,
-    semester: 3,
-    dosen: "Thomas Gunawan, S.Kom., M.Kom.",
-    deskripsi:
-      "Mempelajari perancangan basis data untuk menyimpan informasi secara terstruktur, meliputi pemodelan entitas dan relasi, model relasional, kunci, serta normalisasi.",
-    capaian: [
-      "Mengidentifikasi entitas, atribut, dan relasi dari suatu kebutuhan data",
-      "Membuat diagram Entity Relationship Diagram (ERD)",
-      "Mengubah model data menjadi rancangan tabel relasional",
-      "Menerapkan normalisasi dasar untuk mengurangi redundansi data",
-    ],
-  },
 
   // SEMESTER 4
+edit-profile
   {
     kode: "IF401",
     nama: "Analisis dan Strategi Algoritma",
@@ -276,27 +178,30 @@ export const courses = [
       "Mengevaluasi kegunaan antarmuka berdasarkan kriteria yang relevan",
     ],
   },
+
+    main
   {
     kode: "IF404",
-    nama: "Pemrograman Berbasis Platform",
+    nama: "Pemrograman Berbasis Web",
     sks: 3,
     semester: 4,
-    dosen: "Monica Lestari, S.T., M.Cs.",
+    dosen: "Puspaningtyas Sanjoyo Adi, S.T., M.T.",
     deskripsi:
       "Mempelajari pengembangan aplikasi dengan memanfaatkan platform, pustaka, dan lingkungan pemrograman tertentu sesuai kebutuhan aplikasi.",
     capaian: [
       "Menjelaskan konsep platform dan lingkungan pengembangan aplikasi",
-      "Menggunakan pustaka atau komponen yang disediakan suatu platform",
-      "Mengembangkan aplikasi sederhana dengan memanfaatkan fitur platform",
+      "Menggunakan pustaka atau komponen yang disediakan suatu web",
+      "Mengembangkan aplikasi sederhana dengan memanfaatkan fitur web",
       "Menguji dan memperbaiki fungsi aplikasi yang dikembangkan",
     ],
   },
+
   {
     kode: "IF405",
     nama: "Machine Learning",
     sks: 3,
     semester: 4,
-    dosen: "Albert Christian, S.Kom., M.T.",
+    dosen: "Dr. Sri Hartati Wijono",
     deskripsi:
       "Memperkenalkan pembelajaran mesin, yaitu metode komputasi yang mempelajari pola dari data untuk menghasilkan prediksi atau pengelompokan, termasuk persiapan data, pelatihan model, dan evaluasi kinerja.",
     capaian: [
