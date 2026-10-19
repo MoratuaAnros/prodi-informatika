@@ -1,15 +1,5 @@
-// src/data/courses.js
-// DATA CONTOH (dummy data). Sesuai ketentuan tugas, kita tidak memakai
-// backend/database; data cukup berupa array of object di file JavaScript.
-//
-// Setiap mata kuliah punya atribut wajib: kode & sks (sesuai permintaan tugas),
-// ditambah atribut lain untuk melengkapi halaman profil mata kuliah.
-// Silakan ubah isinya sesuai kurikulum prodi Anda.
-
 export const courses = [
-  // =========================
   // SEMESTER 1
-  // =========================
   {
     kode: "IF101",
     nama: "Algoritma dan Pemrograman",
@@ -86,9 +76,7 @@ export const courses = [
     ],
   },
 
-  // =========================
   // SEMESTER 2
-  // =========================
   {
     kode: "IF201",
     nama: "Pemrograman Berorientasi Objek",
@@ -165,9 +153,7 @@ export const courses = [
     ],
   },
 
-  // =========================
   // SEMESTER 3
-  // =========================
   {
     kode: "IF301",
     nama: "Struktur Data Non Linear",
@@ -244,9 +230,7 @@ export const courses = [
     ],
   },
 
-  // =========================
   // SEMESTER 4
-  // =========================
   {
     kode: "IF401",
     nama: "Analisis dan Strategi Algoritma",

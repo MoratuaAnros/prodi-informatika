@@ -66,26 +66,6 @@ prodi-informatika/
 4. **Menu hamburger** pada tampilan ponsel (`useState`, `onClick`).
 5. **Formulir kontak** dengan validasi input; pesan terkirim disimpan di `localStorage`.
 
-## Skenario pengujian
-
-Isi kolom **Status uji** setelah Anda mencoba sendiri di browser.
-
-| No | Skenario | Hasil yang diharapkan | Status uji |
-|---|---|---|---|
-| 1 | Klik nama mata kuliah di daftar | Tampil detail mata kuliah (kode, SKS, deskripsi) | |
-| 2 | Klik "Beranda" di Navbar dari halaman detail | Tampil halaman Beranda | |
-| 3 | Klik "Kembali ke Daftar" di halaman detail | Kembali ke daftar mata kuliah | |
-| 4 | Ketik "web" pada kolom pencarian | Hanya "Pemrograman Web" yang tampil | |
-| 5 | Ketik "zzz" pada kolom pencarian | Tampil pesan "Tidak ada mata kuliah yang cocok" | |
-| 6 | Pilih filter "4 SKS" | Hanya "Algoritma dan Struktur Data" yang tampil | |
-| 7 | Klik bintang pada sebuah mata kuliah, lalu refresh browser | Bintang tetap aktif (tersimpan di localStorage) | |
-| 8 | Centang "Hanya favorit" | Hanya mata kuliah berbintang yang tampil | |
-| 9 | Kirim form kontak dengan semua kolom kosong | Muncul 3 pesan error merah, pesan tidak terkirim | |
-| 10 | Isi email "abc" lalu kirim | Muncul error "Format email tidak valid" | |
-| 11 | Isi form dengan benar lalu kirim | Muncul pesan sukses, form kosong, jumlah pesan bertambah | |
-| 12 | Buka `/#/mata-kuliah/XYZ` | Tampil "Mata kuliah tidak ditemukan" | |
-| 13 | Perkecil lebar jendela ≤ 720px | Menu berubah jadi tombol ☰, kartu tersusun vertikal | |
-
 ## Teknologi
 
 React 18, React Router 6, Vite 5, CSS murni.

@@ -1,10 +1,3 @@
-/* src/index.css
-   CSS GLOBAL buatan sendiri. Dibagi menjadi bagian-bagian bernomor agar mudah dicari.
-   Urutan: 1.Variabel -> 2.Reset -> 3.Layout -> 4.Komponen -> 5.Responsif */
-
-/* ========== 1. VARIABEL WARNA & UKURAN ==========
-   CSS variable (--nama) ditulis sekali di :root lalu dipakai di mana saja
-   dengan var(--nama). Mau ganti tema? Cukup ubah di sini. */
 :root {
   --biru-tua: #12305b;
   --biru: #1f4f9a;
@@ -53,8 +46,6 @@ main { flex: 1; } /* isi halaman mengisi ruang sehingga footer selalu di bawah *
 .container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 1rem; }
 .section { padding-top: 2rem; padding-bottom: 2rem; }
 
-/* GRID: kolom otomatis. minmax(240px, 1fr) = tiap kolom minimal 240px;
-   jika layar sempit, kolom otomatis turun ke baris berikutnya (responsif). */
 .grid { display: grid; gap: 1rem; margin-bottom: 1rem; }
 .grid-3 { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
